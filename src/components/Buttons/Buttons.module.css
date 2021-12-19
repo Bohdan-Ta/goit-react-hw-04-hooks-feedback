@@ -1,0 +1,32 @@
+.button {
+  height: 80px;
+  width: 200px;
+  line-height: 40px;
+  background: #f5af55d7;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 22px;
+  padding: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  animation: animate_pulse2 2s infinite;
+  cursor: pointer;
+}
+.button:hover {
+  transform: scale(1.1);
+  animation: none;
+  background: coral;
+}
+
+@keyframes animate_pulse2 {
+  0% {
+    box-shadow: 0 0 0 0 rgb(228, 25, 49, 0);
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgb(228, 25, 49, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgb(228, 25, 49, 0);
+  }
+}
