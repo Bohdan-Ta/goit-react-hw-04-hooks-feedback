@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import randomColor from '../../helpers/randomColor';
-import s from '../Buttons/Buttons.module.css';
+import React from "react";
+import PropTypes from "prop-types";
+import randomColor from "../../helpers/randomColor";
+import s from "../Buttons/Buttons.module.css";
 
 export default function Buttons({ onIncrementFeedback, nameFeedback }) {
   return (
