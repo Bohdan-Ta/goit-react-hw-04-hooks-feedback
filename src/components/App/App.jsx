@@ -5,7 +5,7 @@ import Statistics from "../Statistics";
 import Notification from "../Notification";
 
 function App() {
-  const [state, setState] = useState({ good: 0, neutral: 0, bad: 0, apple: 0 });
+  const [state, setState] = useState({ good: 0, neutral: 0, bad: 0 });
 
   const incrementFeedback = (nameFeedback) => {
     setState((prevState) => ({
@@ -19,14 +19,10 @@ function App() {
   };
 
   const persantageGoodFeedback = () => {
-    // const { good } = this.state;
-    // const sumFeedback = this.totalFeedback();
     return Math.trunc((state.good / totalFeedback()) * 100);
   };
 
   const options = Object.keys(state);
-  // const total = this.totalFeedback();
-  // const persantege = this.persantageGoodFeedback();
   const statistics = Object.entries(state);
 
   return (
