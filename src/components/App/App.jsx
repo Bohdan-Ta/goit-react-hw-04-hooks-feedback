@@ -4,7 +4,7 @@ import Section from "../Section";
 import Statistics from "../Statistics";
 import Notification from "../Notification";
 
-function App() {
+export default function App() {
   const [state, setState] = useState({ good: 0, neutral: 0, bad: 0 });
 
   const incrementFeedback = (nameFeedback) => {
@@ -48,5 +48,3 @@ function App() {
     </>
   );
 }
-
-export default App;
