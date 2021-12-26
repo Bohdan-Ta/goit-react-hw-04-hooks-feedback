@@ -18,12 +18,14 @@ export default function App() {
     return Object.values(state).reduce((acc, value) => acc + value, 0);
   };
 
-  const persantageGoodFeedback = () => {
+  const percentageGoodFeedback = () => {
     return Math.trunc((state.good / totalFeedback()) * 100);
   };
 
   const options = Object.keys(state);
   const statistics = Object.entries(state);
+  const total = totalFeedback();
+  const percent = percentageGoodFeedback();
 
   return (
     <>
@@ -31,14 +33,14 @@ export default function App() {
         <Feedback options={options} onIncrementFeedback={incrementFeedback} />
       </Section>
       <Section title="Statistics">
-        {totalFeedback() > 0 && (
+        {total > 0 && (
           <Statistics
             statistics={statistics}
-            total={totalFeedback()}
-            persantageGoodFeedback={persantageGoodFeedback()}
+            total={total}
+            percentageGoodFeedback={percent}
           />
         )}
-        {!totalFeedback() > 0 && (
+        {!total > 0 && (
           <Notification
             message="There is no feedback!       
             Make your choice"

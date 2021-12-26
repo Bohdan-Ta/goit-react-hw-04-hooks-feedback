@@ -1,11 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import s from '../Statistics/Statistics.module.css';
+import React from "react";
+import PropTypes from "prop-types";
+import s from "../Statistics/Statistics.module.css";
 
 export default function Statistics({
   statistics,
   total,
-  persantageGoodFeedback,
+  percentageGoodFeedback,
 }) {
   return (
     <ul className={s.wrapper}>
@@ -21,7 +21,7 @@ export default function Statistics({
       </li>
       <li className={s.list}>
         <p className={s.itemLikes}>Positive:</p>
-        <span className={s.data}>{persantageGoodFeedback} %</span>
+        <span className={s.data}>{percentageGoodFeedback} %</span>
       </li>
     </ul>
   );
@@ -30,5 +30,5 @@ export default function Statistics({
 Statistics.propTypes = {
   statistics: PropTypes.arrayOf(PropTypes.array).isRequired,
   total: PropTypes.number.isRequired,
-  persantageGoodFeedback: PropTypes.number.isRequired,
+  percentageGoodFeedback: PropTypes.number.isRequired,
 };
